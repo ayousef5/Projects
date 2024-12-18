@@ -1,6 +1,5 @@
 // University of Illinois at Chicago
 // Name: Ahmed Yousef
-// UIN: 668143233
 // Project 2: Countdown Math
 // Project Description: This project involes creating a countdown math 
 // game where players use randomely selected numbers to reach a target through calculations.
