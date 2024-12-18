@@ -1,6 +1,6 @@
 // University of Illinois at Chicago
 // Name: Ahmed Yousef
-// Project 3: Countdown Letters
+// Project 3:  Countdown Letters
 // This project is a word game where players use 9 random letters,
 // including 3 to 5 vowels, to form the longest valid word. The program checks the validity 
 // of the words, which determines the winner, and allows players to play multiple rounds
