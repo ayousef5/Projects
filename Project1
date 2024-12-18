@@ -1,1 +1,103 @@
 
+// Author: Ahmed Yousef
+//Project: ASCII Art - Sears Tower
+// This program displays an ASCII representation fo the Sears Tower based on thr user's specifies size
+// Date: 9/9/2024 
+/*  My output for the triangle: 
+*
+**
+***
+****
+*****
+ */
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int choice; // variable to store user choice
+    int size; // variable to store user size for the tower
+    /* The menu output. Don't modify this, so that it outputs exactly as expected
+       cout << "Program 1: Sears Tower" << endl;
+       cout << "Which option would you like?" << endl;
+       cout << "  1. Display original graphic" << endl;
+       cout << "  2. Display Sears Tower" << endl;
+       cout << "Your choice: "; */
+    cin >> choice;
+   // The prompt for entering thesize, if the user chooses the tower
+  //  cout << "What is the size of the Sears Tower? "; 
+
+   if (choice == 1){
+// drawing a right angle triangle
+int height = 5; // height of the triangle
+// loop to print each row for the triangle
+for (int t = 1; t <= height; ++t){
+   for (int j = 1; j <= t; ++j){
+      cout << "*";
+   }
+   cout << "\n";
+}
+   }
+// If the choice is 2, it will ask for size and will draw the tower
+if (choice == 2){
+cin >> size;
+
+    // roof of top block
+    cout << setfill(' ') << setw(size + 2) << "" << setfill('_') << setw(size) << "" << endl;
+   for (int i = 0; i < size; i++){
+      if (i == 0) {
+      cout << setfill(' ') << setw(size + 2) << "|" << setfill('#') << setw(size + 1) << "|" << endl;
+      }
+      else if (i == size - 1) {
+     cout << " " << setfill('_') << setw(size + 1) << "|" << setfill(' ') << setw(size + 1) << "|" << endl;
+      }
+      else {
+       cout << setw(size + 2) << "|" << setfill(' ') << setw(size + 1) << "|" << endl;
+      }
+      cout << setfill(' ');
+   }
+   // mid part
+   for (int i = 0; i < size; i++){
+      if (i == 0) {
+      cout << "|" << setfill('#') << setw(size + 1) << "|" << setw(size + 1) << "|" << endl;
+
+      }
+      else if (i == size - 1) {
+      cout << "|" << setfill(' ') << setw(size + 1) << "|" << setw(size +1 ) << "|" << setfill('_') << setw(size) << "" << endl;
+
+      }
+      else {
+      cout << "|" << setfill(' ') << setw(size + 1) << "|" << setw(size +1) << "|" << endl;
+
+      }
+
+   }
+
+    // bottom part
+   for (int i = 0; i < size * 2; i++){
+      //Top border of the bottom part
+      if (i == 0) {
+      cout << "|" << setfill('#') << setw(size + 1) << "|" << setw(size + 1) << "|" << setw(size + 1) << "|" << endl;
+
+      }
+      // Middle part of the bottom section
+      else {
+         cout << "|" << setfill(' ') << setw(size + 1) << "|" << setw(size + 1) << "|" << setw(size + 1) << "|" << endl;
+      }
+   }
+   //Bottom Border of the entire tower
+    cout << setfill('=') << setw(size * 3 + 4) << "" << endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+}
